@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AqV-vp-QTN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tip Calculator-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="com_ntduy90_tipcalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fLL-pA-AFT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYZ-H6-71W">
+                                <rect key="frame" x="155" y="89" width="65.5" height="33.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZI4-db-Mox" customClass="ItemView" customModule="com_ntduy90_tipcalculator" customModuleProvider="target">
+                                <rect key="frame" x="20" y="142.5" width="335" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Ung-8L-Gaj"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2cS-Ay-jd7">
+                                <rect key="frame" x="20" y="142.5" width="335" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYh-e0-UIy">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="60"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <color key="textColor" red="0.5490196078431373" green="0.75686274509803919" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m8S-MU-8LD">
+                                <rect key="frame" x="20" y="252.5" width="335" height="267"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="umt-4z-uuY" customClass="ItemButtonView" customModule="com_ntduy90_tipcalculator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="157.5" height="123.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Bill"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="content" value="$1000"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="titleHexColor" value="808080"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="contentHexColor" value="1EAAF1"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W10-x1-D0M" customClass="ItemButtonView" customModule="com_ntduy90_tipcalculator" customModuleProvider="target">
+                                        <rect key="frame" x="177.5" y="0.0" width="157.5" height="123.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="% Tip"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="titleHexColor" value="808080"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="content" value="10%"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="contentHexColor" value="1EAAF1"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ji0-Na-AOj" customClass="ItemButtonView" customModule="com_ntduy90_tipcalculator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="143.5" width="157.5" height="123.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="People"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="titleHexColor" value="808080"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="contentHexColor" value="1EAAF1"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="content" value="2"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YTd-fA-r3k" customClass="ItemButtonView" customModule="com_ntduy90_tipcalculator" customModuleProvider="target">
+                                        <rect key="frame" x="177.5" y="143.5" width="157.5" height="123.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Pay"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="titleHexColor" value="808080"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="content" value="$550"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="contentHexColor" value="8CC152"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="YTd-fA-r3k" secondAttribute="trailing" id="62z-n6-JMJ"/>
+                                    <constraint firstItem="YTd-fA-r3k" firstAttribute="leading" secondItem="m8S-MU-8LD" secondAttribute="centerX" constant="10" id="9Uy-ZS-4IK"/>
+                                    <constraint firstItem="YTd-fA-r3k" firstAttribute="top" secondItem="m8S-MU-8LD" secondAttribute="centerY" constant="10" id="A2A-B1-zcY"/>
+                                    <constraint firstAttribute="trailing" secondItem="W10-x1-D0M" secondAttribute="trailing" id="N7j-qO-pDS"/>
+                                    <constraint firstItem="W10-x1-D0M" firstAttribute="leading" secondItem="m8S-MU-8LD" secondAttribute="centerX" constant="10" id="OSz-AK-M63"/>
+                                    <constraint firstItem="Ji0-Na-AOj" firstAttribute="top" secondItem="m8S-MU-8LD" secondAttribute="centerY" constant="10" id="U63-Gf-Guv"/>
+                                    <constraint firstItem="W10-x1-D0M" firstAttribute="bottom" secondItem="m8S-MU-8LD" secondAttribute="centerY" constant="-10" id="UHA-8d-xWo"/>
+                                    <constraint firstItem="Ji0-Na-AOj" firstAttribute="leading" secondItem="m8S-MU-8LD" secondAttribute="leading" id="UlU-Uc-zmB"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ji0-Na-AOj" secondAttribute="bottom" id="Z6a-uH-S1K"/>
+                                    <constraint firstItem="umt-4z-uuY" firstAttribute="bottom" secondItem="m8S-MU-8LD" secondAttribute="centerY" constant="-10" id="g0U-hC-GnW"/>
+                                    <constraint firstItem="umt-4z-uuY" firstAttribute="trailing" secondItem="m8S-MU-8LD" secondAttribute="centerX" constant="-10" id="gXL-Jy-HK4"/>
+                                    <constraint firstItem="umt-4z-uuY" firstAttribute="top" secondItem="m8S-MU-8LD" secondAttribute="top" id="jl2-dY-GQx"/>
+                                    <constraint firstItem="W10-x1-D0M" firstAttribute="top" secondItem="m8S-MU-8LD" secondAttribute="top" id="pj6-qS-Ctg"/>
+                                    <constraint firstItem="umt-4z-uuY" firstAttribute="leading" secondItem="m8S-MU-8LD" secondAttribute="leading" id="rNs-Zp-CQB"/>
+                                    <constraint firstItem="Ji0-Na-AOj" firstAttribute="trailing" secondItem="m8S-MU-8LD" secondAttribute="centerX" constant="-10" id="tVl-XH-xN0"/>
+                                    <constraint firstAttribute="bottom" secondItem="YTd-fA-r3k" secondAttribute="bottom" id="w85-Ft-Xfq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ZI4-db-Mox" firstAttribute="top" secondItem="LYZ-H6-71W" secondAttribute="bottom" constant="20" id="3m0-C8-NQD"/>
+                            <constraint firstAttribute="trailing" secondItem="ZI4-db-Mox" secondAttribute="trailing" constant="20" id="ALu-Rr-eWS"/>
+                            <constraint firstItem="2cS-Ay-jd7" firstAttribute="centerX" secondItem="ZI4-db-Mox" secondAttribute="centerX" id="BNl-RS-B2H"/>
+                            <constraint firstAttribute="trailing" secondItem="m8S-MU-8LD" secondAttribute="trailing" constant="20" id="Bbz-K1-d9c"/>
+                            <constraint firstItem="m8S-MU-8LD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Fxc-bM-W2p"/>
+                            <constraint firstItem="2cS-Ay-jd7" firstAttribute="top" secondItem="ZI4-db-Mox" secondAttribute="top" id="H4t-Pu-aKx"/>
+                            <constraint firstItem="fLL-pA-AFT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="LXG-RG-wLr"/>
+                            <constraint firstAttribute="bottom" secondItem="fLL-pA-AFT" secondAttribute="bottom" id="Ley-s7-7wa"/>
+                            <constraint firstItem="m8S-MU-8LD" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="MY5-L4-ESl"/>
+                            <constraint firstItem="LYZ-H6-71W" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="SBS-Z4-38f"/>
+                            <constraint firstItem="2cS-Ay-jd7" firstAttribute="height" secondItem="ZI4-db-Mox" secondAttribute="height" id="UUg-Ow-ckD"/>
+                            <constraint firstItem="m8S-MU-8LD" firstAttribute="top" secondItem="ZI4-db-Mox" secondAttribute="bottom" constant="50" id="YwV-IF-VtU"/>
+                            <constraint firstItem="LYZ-H6-71W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZnH-mw-4Zl"/>
+                            <constraint firstAttribute="trailing" secondItem="fLL-pA-AFT" secondAttribute="trailing" id="hjR-js-Xvg"/>
+                            <constraint firstItem="fLL-pA-AFT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jzd-aj-Gmf"/>
+                            <constraint firstItem="m8S-MU-8LD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mmn-04-3th"/>
+                            <constraint firstItem="2cS-Ay-jd7" firstAttribute="width" secondItem="ZI4-db-Mox" secondAttribute="width" id="vu8-Ir-9fy"/>
+                            <constraint firstItem="ZI4-db-Mox" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="yVd-SH-l0f"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tip Calculator" id="LPV-0m-vX7"/>
+                    <connections>
+                        <outlet property="background" destination="fLL-pA-AFT" id="q4A-do-ByY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XRI-n5-FQf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AqV-vp-QTN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vyi-tB-e7x">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ceN-cn-N9R"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iRS-DC-UPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17" y="139"/>
+        </scene>
+    </scenes>
+</document>
