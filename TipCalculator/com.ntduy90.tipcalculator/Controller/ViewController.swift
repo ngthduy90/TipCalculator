@@ -1,22 +1,16 @@
-//
-//  ViewController.swift
-//  com.ntduy90.tipcalculator
-//
-//  Created by Duy Nguyen on 5/31/17.
-//  Copyright © 2017 Duy Nguyen. All rights reserved.
-//
+
 
 import UIKit
 import ChameleonFramework
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var settingsButton: UIButton!
+    
+    let transition = BubbleTransition()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        initBackground()
-        
-        initNavigationBarStyle()
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,19 +18,30 @@ class ViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
-//        print("Did layout subviews")
+        print("Did layout subviews")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        print("View will appear")
+        initBackground()
+        
+        initNavigationBarStyle()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let controller = segue.destination
+        
+        controller.transitioningDelegate = self
+        
+        controller.modalPresentationStyle = .custom
     }
     
     @IBOutlet weak var background: UIView!
     
     func initBackground() {
-        let backgroundLayer = applyGradient(colours: [HexColor("FCE38A")!, HexColor("F38181")!])
+        let backgroundLayer = applyGradient(colours: [AppSettings.instance.primaryColor!, AppSettings.instance.subColor!])
         
         background.backgroundColor = UIColor.clear
         
@@ -46,7 +51,7 @@ class ViewController: UIViewController {
     func initNavigationBarStyle() {
         self.navigationController?
             .navigationBar
-            .titleTextAttributes = [NSForegroundColorAttributeName : HexColor("808080", 0.8)!]
+            .titleTextAttributes = [NSForegroundColorAttributeName : AppSettings.instance.titleTextColor!]
     }
 
     func applyGradient(colours: [UIColor]) -> CALayer {
@@ -59,5 +64,27 @@ class ViewController: UIViewController {
         return gradient
     }
 
+}
+
+extension ViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        transition.transitionMode = .present
+        transition.startingPoint = settingsButton.center
+        transition.bubbleColor = AppSettings.instance.primaryColor!
+        
+        return transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        transition.transitionMode = .dismiss
+        transition.startingPoint = settingsButton.center
+        transition.bubbleColor = AppSettings.instance.primaryColor!
+        
+        return transition
+    }
+    
 }
 

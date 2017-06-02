@@ -18,6 +18,13 @@
 		A959F40D1EE0A135001E5560 /* AKPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A959F40C1EE0A135001E5560 /* AKPickerView.swift */; };
 		A95F51A81EDF293F0098CDFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95F51A71EDF293F0098CDFC /* AppDelegate.swift */; };
 		A95F51AF1EDF293F0098CDFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A95F51AE1EDF293F0098CDFC /* Assets.xcassets */; };
+		A9617F451EE1C59200244881 /* NumberKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9617F441EE1C59200244881 /* NumberKeyboard.xib */; };
+		A9617F481EE1CB6600244881 /* BubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9617F471EE1CB6600244881 /* BubbleTransition.swift */; };
+		A9617F4A1EE1CE0B00244881 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9617F491EE1CE0B00244881 /* SettingsViewController.swift */; };
+		A9617F4D1EE1D35300244881 /* CircleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9617F4C1EE1D35300244881 /* CircleButton.xib */; };
+		A9617F501EE1D4EA00244881 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9617F4F1EE1D4EA00244881 /* AppSettings.swift */; };
+		A9617F521EE1D51100244881 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9617F511EE1D51100244881 /* CircleButtonView.swift */; };
+		A9617F541EE1D83600244881 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9617F531EE1D83600244881 /* AppStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +43,13 @@
 		A95F51AE1EDF293F0098CDFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A95F51B11EDF293F0098CDFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A95F51B31EDF293F0098CDFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9617F441EE1C59200244881 /* NumberKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumberKeyboard.xib; sourceTree = "<group>"; };
+		A9617F471EE1CB6600244881 /* BubbleTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleTransition.swift; sourceTree = "<group>"; };
+		A9617F491EE1CE0B00244881 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A9617F4C1EE1D35300244881 /* CircleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleButton.xib; sourceTree = "<group>"; };
+		A9617F4F1EE1D4EA00244881 /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		A9617F511EE1D51100244881 /* CircleButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
+		A9617F531EE1D83600244881 /* AppStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,11 +85,11 @@
 		A959F4001EE08CF3001E5560 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				A959F4011EE08CF3001E5560 /* ItemView.swift */,
-				A959F4061EE090E4001E5560 /* ItemButtonView.xib */,
-				A959F4081EE0927B001E5560 /* ItemButtonView.swift */,
-				A959F40A1EE09E6E001E5560 /* ItemButtonProtocol.swift */,
-				A959F40C1EE0A135001E5560 /* AKPickerView.swift */,
+				A9617F4B1EE1D33700244881 /* CircleButton */,
+				A9617F431EE1C56800244881 /* NumberKeyboard */,
+				A9617F421EE1C55600244881 /* PickerView */,
+				A9617F411EE1C54B00244881 /* ItemView */,
+				A9617F401EE1C53200244881 /* ItemButtonView */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -84,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				A959F4041EE08D05001E5560 /* ViewController.swift */,
+				A9617F491EE1CE0B00244881 /* SettingsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -109,14 +124,76 @@
 		A95F51A61EDF293F0098CDFC /* com.ntduy90.tipcalculator */ = {
 			isa = PBXGroup;
 			children = (
+				A9617F4E1EE1D45B00244881 /* Core */,
 				A959F3F41EE08AA0001E5560 /* Storyboards */,
 				A959F4031EE08D05001E5560 /* Controller */,
 				A959F4001EE08CF3001E5560 /* CustomViews */,
+				A9617F461EE1CB2500244881 /* Animations */,
 				A95F51A71EDF293F0098CDFC /* AppDelegate.swift */,
 				A95F51AE1EDF293F0098CDFC /* Assets.xcassets */,
 				A95F51B31EDF293F0098CDFC /* Info.plist */,
 			);
 			path = com.ntduy90.tipcalculator;
+			sourceTree = "<group>";
+		};
+		A9617F401EE1C53200244881 /* ItemButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				A959F4061EE090E4001E5560 /* ItemButtonView.xib */,
+				A959F4081EE0927B001E5560 /* ItemButtonView.swift */,
+				A959F40A1EE09E6E001E5560 /* ItemButtonProtocol.swift */,
+			);
+			name = ItemButtonView;
+			sourceTree = "<group>";
+		};
+		A9617F411EE1C54B00244881 /* ItemView */ = {
+			isa = PBXGroup;
+			children = (
+				A959F4011EE08CF3001E5560 /* ItemView.swift */,
+			);
+			name = ItemView;
+			sourceTree = "<group>";
+		};
+		A9617F421EE1C55600244881 /* PickerView */ = {
+			isa = PBXGroup;
+			children = (
+				A959F40C1EE0A135001E5560 /* AKPickerView.swift */,
+			);
+			name = PickerView;
+			sourceTree = "<group>";
+		};
+		A9617F431EE1C56800244881 /* NumberKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				A9617F441EE1C59200244881 /* NumberKeyboard.xib */,
+			);
+			name = NumberKeyboard;
+			sourceTree = "<group>";
+		};
+		A9617F461EE1CB2500244881 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				A9617F471EE1CB6600244881 /* BubbleTransition.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		A9617F4B1EE1D33700244881 /* CircleButton */ = {
+			isa = PBXGroup;
+			children = (
+				A9617F4C1EE1D35300244881 /* CircleButton.xib */,
+				A9617F511EE1D51100244881 /* CircleButtonView.swift */,
+			);
+			name = CircleButton;
+			sourceTree = "<group>";
+		};
+		A9617F4E1EE1D45B00244881 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A9617F4F1EE1D4EA00244881 /* AppSettings.swift */,
+				A9617F531EE1D83600244881 /* AppStyle.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		ADB0C99D3029E93DEBF91559 /* Frameworks */ = {
@@ -191,8 +268,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A959F3F51EE08BD5001E5560 /* LaunchScreen.storyboard in Resources */,
+				A9617F4D1EE1D35300244881 /* CircleButton.xib in Resources */,
 				A959F4071EE090E4001E5560 /* ItemButtonView.xib in Resources */,
 				A959F3F61EE08BD5001E5560 /* Main.storyboard in Resources */,
+				A9617F451EE1C59200244881 /* NumberKeyboard.xib in Resources */,
 				A95F51AF1EDF293F0098CDFC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,8 +335,13 @@
 				A959F4091EE0927B001E5560 /* ItemButtonView.swift in Sources */,
 				A959F40D1EE0A135001E5560 /* AKPickerView.swift in Sources */,
 				A95F51A81EDF293F0098CDFC /* AppDelegate.swift in Sources */,
+				A9617F481EE1CB6600244881 /* BubbleTransition.swift in Sources */,
+				A9617F501EE1D4EA00244881 /* AppSettings.swift in Sources */,
+				A9617F541EE1D83600244881 /* AppStyle.swift in Sources */,
 				A959F40B1EE09E6E001E5560 /* ItemButtonProtocol.swift in Sources */,
 				A959F4021EE08CF3001E5560 /* ItemView.swift in Sources */,
+				A9617F521EE1D51100244881 /* CircleButtonView.swift in Sources */,
+				A9617F4A1EE1CE0B00244881 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

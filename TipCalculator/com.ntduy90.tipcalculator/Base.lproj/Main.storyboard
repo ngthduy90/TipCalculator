@@ -14,7 +14,7 @@
         <!--Tip Calculator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="com_ntduy90_tipcalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TipCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -33,7 +33,7 @@
                                 <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZI4-db-Mox" customClass="ItemView" customModule="com_ntduy90_tipcalculator" customModuleProvider="target">
+                            <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZI4-db-Mox" customClass="ItemView" customModule="TipCalculator" customModuleProvider="target">
                                 <rect key="frame" x="20" y="142.5" width="335" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -59,7 +59,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m8S-MU-8LD">
                                 <rect key="frame" x="20" y="252.5" width="335" height="267"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="umt-4z-uuY" customClass="ItemButtonView" customModule="com_ntduy90_tipcalculator" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="umt-4z-uuY" customClass="ItemButtonView" customModule="TipCalculator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="157.5" height="123.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
@@ -72,7 +72,7 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="contentHexColor" value="1EAAF1"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W10-x1-D0M" customClass="ItemButtonView" customModule="com_ntduy90_tipcalculator" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W10-x1-D0M" customClass="ItemButtonView" customModule="TipCalculator" customModuleProvider="target">
                                         <rect key="frame" x="177.5" y="0.0" width="157.5" height="123.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
@@ -85,7 +85,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ji0-Na-AOj" customClass="ItemButtonView" customModule="com_ntduy90_tipcalculator" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ji0-Na-AOj" customClass="ItemButtonView" customModule="TipCalculator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="143.5" width="157.5" height="123.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
@@ -98,7 +98,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YTd-fA-r3k" customClass="ItemButtonView" customModule="com_ntduy90_tipcalculator" customModuleProvider="target">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YTd-fA-r3k" customClass="ItemButtonView" customModule="TipCalculator" customModuleProvider="target">
                                         <rect key="frame" x="177.5" y="143.5" width="157.5" height="123.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
@@ -153,14 +153,54 @@
                             <constraint firstItem="ZI4-db-Mox" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="yVd-SH-l0f"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Tip Calculator" id="LPV-0m-vX7"/>
+                    <navigationItem key="navigationItem" title="Tip Calculator" id="LPV-0m-vX7">
+                        <barButtonItem key="rightBarButtonItem" id="Ty4-th-fDk">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kSV-jA-PyC">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <segue destination="t6b-lL-jFD" kind="presentation" id="daI-Yb-iHZ"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="background" destination="fLL-pA-AFT" id="q4A-do-ByY"/>
+                        <outlet property="settingsButton" destination="kSV-jA-PyC" id="2Rf-z5-pD5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+            <point key="canvasLocation" x="911" y="139"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="R3F-IJ-7GW">
+            <objects>
+                <viewController id="t6b-lL-jFD" customClass="SettingsViewController" customModule="TipCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CoA-WK-d7e"/>
+                        <viewControllerLayoutGuide type="bottom" id="kbw-MR-CTe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iKK-ds-bfp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAx-Xg-EIj">
+                                <rect key="frame" x="16" y="28" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="didTapBackButton:" destination="t6b-lL-jFD" eventType="touchUpInside" id="2uI-OR-SNr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ChD-2C-Mn7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1722" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XRI-n5-FQf">
@@ -172,6 +212,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="c5i-Yh-BGm">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ceN-cn-N9R"/>
                     </connections>

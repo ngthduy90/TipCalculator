@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CircleButtonView" customModule="TipCalculator" customModuleProvider="target">
+            <connections>
+                <outlet property="label" destination="mPx-cy-WFR" id="KFC-mp-iFL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="139" height="108"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPx-cy-WFR">
+                    <rect key="frame" x="15" y="43" width="108" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vo5-EV-TSF">
+                    <rect key="frame" x="15.5" y="0.0" width="108" height="108"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Vo5-EV-TSF" secondAttribute="height" multiplier="1:1" id="pYQ-g0-pb3"/>
+                    </constraints>
+                    <connections>
+                        <action selector="didTap:" destination="-1" eventType="touchUpInside" id="BAq-Vi-LIa"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="mPx-cy-WFR" firstAttribute="centerX" secondItem="Vo5-EV-TSF" secondAttribute="centerX" id="6F6-zy-ufK"/>
+                <constraint firstItem="Vo5-EV-TSF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9il-Tz-o14"/>
+                <constraint firstItem="mPx-cy-WFR" firstAttribute="width" secondItem="Vo5-EV-TSF" secondAttribute="width" id="Ccb-Pi-5hQ"/>
+                <constraint firstItem="mPx-cy-WFR" firstAttribute="centerY" secondItem="Vo5-EV-TSF" secondAttribute="centerY" id="JFE-Fw-ei2"/>
+                <constraint firstAttribute="bottom" secondItem="Vo5-EV-TSF" secondAttribute="bottom" id="Tw6-7H-eZc"/>
+                <constraint firstItem="Vo5-EV-TSF" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="lf7-eT-1YC"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-93.5" y="-228"/>
+        </view>
+    </objects>
+</document>
