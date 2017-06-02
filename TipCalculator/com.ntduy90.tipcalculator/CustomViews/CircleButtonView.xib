@@ -12,44 +12,53 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CircleButtonView" customModule="TipCalculator" customModuleProvider="target">
             <connections>
+                <outlet property="boundView" destination="LFA-sa-omG" id="2OV-rO-cnZ"/>
+                <outlet property="button" destination="Vo5-EV-TSF" id="jY9-xo-LtB"/>
                 <outlet property="label" destination="mPx-cy-WFR" id="KFC-mp-iFL"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="139" height="108"/>
+            <rect key="frame" x="0.0" y="0.0" width="155" height="100"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LFA-sa-omG">
+                    <rect key="frame" x="0.0" y="0.0" width="155" height="100"/>
+                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPx-cy-WFR">
-                    <rect key="frame" x="15" y="43" width="108" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="27" y="36.5" width="100" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vo5-EV-TSF">
-                    <rect key="frame" x="15.5" y="0.0" width="108" height="108"/>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vo5-EV-TSF">
+                    <rect key="frame" x="27.5" y="0.0" width="100" height="100"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Vo5-EV-TSF" secondAttribute="height" multiplier="1:1" id="pYQ-g0-pb3"/>
                     </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
                     <connections>
                         <action selector="didTap:" destination="-1" eventType="touchUpInside" id="BAq-Vi-LIa"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="mPx-cy-WFR" firstAttribute="centerX" secondItem="Vo5-EV-TSF" secondAttribute="centerX" id="6F6-zy-ufK"/>
                 <constraint firstItem="Vo5-EV-TSF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9il-Tz-o14"/>
                 <constraint firstItem="mPx-cy-WFR" firstAttribute="width" secondItem="Vo5-EV-TSF" secondAttribute="width" id="Ccb-Pi-5hQ"/>
                 <constraint firstItem="mPx-cy-WFR" firstAttribute="centerY" secondItem="Vo5-EV-TSF" secondAttribute="centerY" id="JFE-Fw-ei2"/>
                 <constraint firstAttribute="bottom" secondItem="Vo5-EV-TSF" secondAttribute="bottom" id="Tw6-7H-eZc"/>
+                <constraint firstItem="LFA-sa-omG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bJh-Gs-4ha"/>
                 <constraint firstItem="Vo5-EV-TSF" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="lf7-eT-1YC"/>
+                <constraint firstAttribute="trailing" secondItem="LFA-sa-omG" secondAttribute="trailing" id="nzF-Sd-onG"/>
+                <constraint firstItem="LFA-sa-omG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wLh-c6-0HW"/>
+                <constraint firstAttribute="bottom" secondItem="LFA-sa-omG" secondAttribute="bottom" id="zFt-Wu-aMu"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-93.5" y="-228"/>
+            <point key="canvasLocation" x="-85.5" y="-228"/>
         </view>
     </objects>
 </document>

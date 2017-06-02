@@ -50,6 +50,8 @@ class ItemButtonView: ItemView {
         }
     }
     
+    @IBOutlet weak var boundView: UIView!
+    
     var type = ItemType.undefined
     
     var delegate: ItemButtonViewDelegate?

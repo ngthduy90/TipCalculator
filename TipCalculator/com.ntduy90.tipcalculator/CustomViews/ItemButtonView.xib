@@ -9,8 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ItemButtonView" customModule="com_ntduy90_tipcalculator" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ItemButtonView" customModule="TipCalculator" customModuleProvider="target">
             <connections>
+                <outlet property="boundView" destination="Bb5-94-SeO" id="0BQ-7h-Khh"/>
                 <outlet property="contentLabel" destination="3Nc-zg-rg9" id="09h-H9-0Jt"/>
                 <outlet property="titleLabel" destination="7cP-ix-ZDz" id="xMX-NN-Zqa"/>
             </connections>
@@ -20,6 +21,10 @@
             <rect key="frame" x="0.0" y="0.0" width="256" height="117"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bb5-94-SeO">
+                    <rect key="frame" x="0.0" y="0.0" width="256" height="117"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="km8-if-R7p">
                     <rect key="frame" x="10" y="20" width="236" height="77"/>
                     <subviews>
@@ -44,15 +49,18 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="km8-if-R7p" firstAttribute="leading" secondItem="nyk-q7-S43" secondAttribute="leading" constant="10" id="16o-DF-nRH"/>
+                <constraint firstItem="Bb5-94-SeO" firstAttribute="top" secondItem="nyk-q7-S43" secondAttribute="top" id="2fN-uJ-Jgk"/>
+                <constraint firstAttribute="bottom" secondItem="Bb5-94-SeO" secondAttribute="bottom" id="479-nE-OJZ"/>
                 <constraint firstItem="7Zk-9r-kUW" firstAttribute="top" secondItem="nyk-q7-S43" secondAttribute="top" id="64p-Ik-Tcn"/>
                 <constraint firstItem="7Zk-9r-kUW" firstAttribute="leading" secondItem="nyk-q7-S43" secondAttribute="leading" id="LYl-cB-Nw7"/>
+                <constraint firstAttribute="trailing" secondItem="Bb5-94-SeO" secondAttribute="trailing" id="MF9-yw-cfX"/>
                 <constraint firstAttribute="trailing" secondItem="7Zk-9r-kUW" secondAttribute="trailing" id="NhW-I8-mw2"/>
                 <constraint firstAttribute="trailing" secondItem="km8-if-R7p" secondAttribute="trailing" constant="10" id="fXR-UQ-3CM"/>
                 <constraint firstItem="km8-if-R7p" firstAttribute="top" secondItem="nyk-q7-S43" secondAttribute="top" constant="20" id="h0p-Af-pti"/>
                 <constraint firstAttribute="bottom" secondItem="km8-if-R7p" secondAttribute="bottom" constant="20" id="qvu-YI-XcD"/>
+                <constraint firstItem="Bb5-94-SeO" firstAttribute="leading" secondItem="nyk-q7-S43" secondAttribute="leading" id="sSD-YA-hAH"/>
                 <constraint firstAttribute="bottom" secondItem="7Zk-9r-kUW" secondAttribute="bottom" id="sjt-tp-ocG"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

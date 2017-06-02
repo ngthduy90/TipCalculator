@@ -27,6 +27,28 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cWh-2w-JVv" userLabel="Popup View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mKY-if-Rwg" userLabel="Bound">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dm8-Jq-wCx" customClass="NumberKeyboardView" customModule="TipCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="347" width="355" height="300"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="mKY-if-Rwg" secondAttribute="bottom" id="8BP-94-XH9"/>
+                                    <constraint firstAttribute="trailing" secondItem="mKY-if-Rwg" secondAttribute="trailing" id="9N2-zj-Gst"/>
+                                    <constraint firstItem="mKY-if-Rwg" firstAttribute="top" secondItem="cWh-2w-JVv" secondAttribute="top" id="YPS-jW-YID"/>
+                                    <constraint firstItem="dm8-Jq-wCx" firstAttribute="height" secondItem="cWh-2w-JVv" secondAttribute="height" multiplier="0.45" id="aoo-FE-Ezt"/>
+                                    <constraint firstItem="mKY-if-Rwg" firstAttribute="leading" secondItem="cWh-2w-JVv" secondAttribute="leading" id="cod-9q-Od8"/>
+                                    <constraint firstAttribute="trailing" secondItem="dm8-Jq-wCx" secondAttribute="trailing" constant="10" id="dkw-XJ-BYD"/>
+                                    <constraint firstAttribute="bottom" secondItem="dm8-Jq-wCx" secondAttribute="bottom" constant="20" id="oDV-e6-r5W"/>
+                                    <constraint firstItem="dm8-Jq-wCx" firstAttribute="leading" secondItem="cWh-2w-JVv" secondAttribute="leading" constant="10" id="xne-7z-Tjj"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYZ-H6-71W">
                                 <rect key="frame" x="155" y="89" width="65.5" height="33.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
@@ -61,7 +83,6 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="umt-4z-uuY" customClass="ItemButtonView" customModule="TipCalculator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="157.5" height="123.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="5"/>
@@ -74,7 +95,6 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W10-x1-D0M" customClass="ItemButtonView" customModule="TipCalculator" customModuleProvider="target">
                                         <rect key="frame" x="177.5" y="0.0" width="157.5" height="123.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="% Tip"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="titleHexColor" value="808080"/>
@@ -87,7 +107,6 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ji0-Na-AOj" customClass="ItemButtonView" customModule="TipCalculator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="143.5" width="157.5" height="123.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="People"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="titleHexColor" value="808080"/>
@@ -100,7 +119,6 @@
                                     </view>
                                     <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YTd-fA-r3k" customClass="ItemButtonView" customModule="TipCalculator" customModuleProvider="target">
                                         <rect key="frame" x="177.5" y="143.5" width="157.5" height="123.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Pay"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="titleHexColor" value="808080"/>
@@ -138,14 +156,18 @@
                             <constraint firstItem="2cS-Ay-jd7" firstAttribute="centerX" secondItem="ZI4-db-Mox" secondAttribute="centerX" id="BNl-RS-B2H"/>
                             <constraint firstAttribute="trailing" secondItem="m8S-MU-8LD" secondAttribute="trailing" constant="20" id="Bbz-K1-d9c"/>
                             <constraint firstItem="m8S-MU-8LD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Fxc-bM-W2p"/>
+                            <constraint firstAttribute="trailing" secondItem="cWh-2w-JVv" secondAttribute="trailing" id="GOR-sN-BFN"/>
                             <constraint firstItem="2cS-Ay-jd7" firstAttribute="top" secondItem="ZI4-db-Mox" secondAttribute="top" id="H4t-Pu-aKx"/>
                             <constraint firstItem="fLL-pA-AFT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="LXG-RG-wLr"/>
                             <constraint firstAttribute="bottom" secondItem="fLL-pA-AFT" secondAttribute="bottom" id="Ley-s7-7wa"/>
                             <constraint firstItem="m8S-MU-8LD" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="MY5-L4-ESl"/>
                             <constraint firstItem="LYZ-H6-71W" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="SBS-Z4-38f"/>
                             <constraint firstItem="2cS-Ay-jd7" firstAttribute="height" secondItem="ZI4-db-Mox" secondAttribute="height" id="UUg-Ow-ckD"/>
+                            <constraint firstItem="cWh-2w-JVv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="V8H-Pv-yY0"/>
+                            <constraint firstAttribute="bottom" secondItem="cWh-2w-JVv" secondAttribute="bottom" id="Yed-Ne-k3U"/>
                             <constraint firstItem="m8S-MU-8LD" firstAttribute="top" secondItem="ZI4-db-Mox" secondAttribute="bottom" constant="50" id="YwV-IF-VtU"/>
                             <constraint firstItem="LYZ-H6-71W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZnH-mw-4Zl"/>
+                            <constraint firstItem="cWh-2w-JVv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fbn-bM-S3n"/>
                             <constraint firstAttribute="trailing" secondItem="fLL-pA-AFT" secondAttribute="trailing" id="hjR-js-Xvg"/>
                             <constraint firstItem="fLL-pA-AFT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jzd-aj-Gmf"/>
                             <constraint firstItem="m8S-MU-8LD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mmn-04-3th"/>

@@ -18,13 +18,15 @@
 		A959F40D1EE0A135001E5560 /* AKPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A959F40C1EE0A135001E5560 /* AKPickerView.swift */; };
 		A95F51A81EDF293F0098CDFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95F51A71EDF293F0098CDFC /* AppDelegate.swift */; };
 		A95F51AF1EDF293F0098CDFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A95F51AE1EDF293F0098CDFC /* Assets.xcassets */; };
-		A9617F451EE1C59200244881 /* NumberKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9617F441EE1C59200244881 /* NumberKeyboard.xib */; };
+		A9617F451EE1C59200244881 /* NumberKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9617F441EE1C59200244881 /* NumberKeyboardView.xib */; };
 		A9617F481EE1CB6600244881 /* BubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9617F471EE1CB6600244881 /* BubbleTransition.swift */; };
 		A9617F4A1EE1CE0B00244881 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9617F491EE1CE0B00244881 /* SettingsViewController.swift */; };
-		A9617F4D1EE1D35300244881 /* CircleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9617F4C1EE1D35300244881 /* CircleButton.xib */; };
+		A9617F4D1EE1D35300244881 /* CircleButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9617F4C1EE1D35300244881 /* CircleButtonView.xib */; };
 		A9617F501EE1D4EA00244881 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9617F4F1EE1D4EA00244881 /* AppSettings.swift */; };
 		A9617F521EE1D51100244881 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9617F511EE1D51100244881 /* CircleButtonView.swift */; };
 		A9617F541EE1D83600244881 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9617F531EE1D83600244881 /* AppStyle.swift */; };
+		A9617F561EE1E03300244881 /* CircleButtonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9617F551EE1E03300244881 /* CircleButtonProtocol.swift */; };
+		A9617F581EE1E2C200244881 /* NumberKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9617F571EE1E2C200244881 /* NumberKeyboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,13 +45,15 @@
 		A95F51AE1EDF293F0098CDFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A95F51B11EDF293F0098CDFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A95F51B31EDF293F0098CDFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9617F441EE1C59200244881 /* NumberKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumberKeyboard.xib; sourceTree = "<group>"; };
+		A9617F441EE1C59200244881 /* NumberKeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumberKeyboardView.xib; sourceTree = "<group>"; };
 		A9617F471EE1CB6600244881 /* BubbleTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleTransition.swift; sourceTree = "<group>"; };
 		A9617F491EE1CE0B00244881 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		A9617F4C1EE1D35300244881 /* CircleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleButton.xib; sourceTree = "<group>"; };
+		A9617F4C1EE1D35300244881 /* CircleButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleButtonView.xib; sourceTree = "<group>"; };
 		A9617F4F1EE1D4EA00244881 /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		A9617F511EE1D51100244881 /* CircleButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
 		A9617F531EE1D83600244881 /* AppStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
+		A9617F551EE1E03300244881 /* CircleButtonProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButtonProtocol.swift; sourceTree = "<group>"; };
+		A9617F571EE1E2C200244881 /* NumberKeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberKeyboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +169,8 @@
 		A9617F431EE1C56800244881 /* NumberKeyboard */ = {
 			isa = PBXGroup;
 			children = (
-				A9617F441EE1C59200244881 /* NumberKeyboard.xib */,
+				A9617F441EE1C59200244881 /* NumberKeyboardView.xib */,
+				A9617F571EE1E2C200244881 /* NumberKeyboardView.swift */,
 			);
 			name = NumberKeyboard;
 			sourceTree = "<group>";
@@ -181,8 +186,9 @@
 		A9617F4B1EE1D33700244881 /* CircleButton */ = {
 			isa = PBXGroup;
 			children = (
-				A9617F4C1EE1D35300244881 /* CircleButton.xib */,
+				A9617F4C1EE1D35300244881 /* CircleButtonView.xib */,
 				A9617F511EE1D51100244881 /* CircleButtonView.swift */,
+				A9617F551EE1E03300244881 /* CircleButtonProtocol.swift */,
 			);
 			name = CircleButton;
 			sourceTree = "<group>";
@@ -268,10 +274,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A959F3F51EE08BD5001E5560 /* LaunchScreen.storyboard in Resources */,
-				A9617F4D1EE1D35300244881 /* CircleButton.xib in Resources */,
+				A9617F4D1EE1D35300244881 /* CircleButtonView.xib in Resources */,
 				A959F4071EE090E4001E5560 /* ItemButtonView.xib in Resources */,
 				A959F3F61EE08BD5001E5560 /* Main.storyboard in Resources */,
-				A9617F451EE1C59200244881 /* NumberKeyboard.xib in Resources */,
+				A9617F451EE1C59200244881 /* NumberKeyboardView.xib in Resources */,
 				A95F51AF1EDF293F0098CDFC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,8 +344,10 @@
 				A9617F481EE1CB6600244881 /* BubbleTransition.swift in Sources */,
 				A9617F501EE1D4EA00244881 /* AppSettings.swift in Sources */,
 				A9617F541EE1D83600244881 /* AppStyle.swift in Sources */,
+				A9617F581EE1E2C200244881 /* NumberKeyboardView.swift in Sources */,
 				A959F40B1EE09E6E001E5560 /* ItemButtonProtocol.swift in Sources */,
 				A959F4021EE08CF3001E5560 /* ItemView.swift in Sources */,
+				A9617F561EE1E03300244881 /* CircleButtonProtocol.swift in Sources */,
 				A9617F521EE1D51100244881 /* CircleButtonView.swift in Sources */,
 				A9617F4A1EE1CE0B00244881 /* SettingsViewController.swift in Sources */,
 			);

@@ -4,6 +4,24 @@ import UIKit
 class CircleButtonView: UIView {
     
     @IBOutlet weak var label: UILabel!
+    
+    @IBOutlet weak var boundView: UIView!
+    
+    @IBOutlet weak var button: UIButton!
+    
+    var actionType = ActionType.tap
+    
+    var delegate: CircleButtonDelegate?
+    
+    @IBInspectable var text: String? {
+        get {
+            return label.text
+        }
+        
+        set(newText) {
+            label.text = newText
+        }
+    }
 
     // MARK: - Initializers
     
@@ -17,9 +35,20 @@ class CircleButtonView: UIView {
         setupView()
     }
     
+    override func layoutSubviews() {
+        self.button.layer.borderColor = AppSettings.instance.primaryColor?.cgColor
+        
+        self.label.textColor = AppSettings.instance.primaryColor
+        
+        self.button.layer.borderWidth = 1.0
+        
+        self.button.layer.cornerRadius = self.button.bounds.size.height * 0.5
+    }
+    
     // MARK: - Actions
     
     @IBAction func didTap(_ sender: Any) {
+        self.delegate?.circleButtonDid(on: actionType)
     }
     
     // MARK: - Private Helper Methods

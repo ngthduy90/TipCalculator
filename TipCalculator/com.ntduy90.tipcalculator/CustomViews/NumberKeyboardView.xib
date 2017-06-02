@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NumberKeyboardView" customModule="TipCalculator" customModuleProvider="target">
+            <connections>
+                <outlet property="boundView" destination="0zZ-k1-2At" id="axq-xL-xft"/>
+                <outlet property="btn0" destination="ujo-pc-bxk" id="rFG-oE-zq0"/>
+                <outlet property="btn1" destination="1w5-gR-8XG" id="yTg-eo-20z"/>
+                <outlet property="btn2" destination="dnQ-Ny-svH" id="uFX-gz-Zvx"/>
+                <outlet property="btn3" destination="pyo-lr-dna" id="X6y-ki-gve"/>
+                <outlet property="btn4" destination="7aH-Ba-iBX" id="LPo-mZ-4l4"/>
+                <outlet property="btn5" destination="RMg-Vf-GWQ" id="Fk8-dx-mgw"/>
+                <outlet property="btn6" destination="0p8-xp-Wa0" id="Tff-Aa-Xr1"/>
+                <outlet property="btn7" destination="smU-OY-85K" id="YHv-oP-FOL"/>
+                <outlet property="btn8" destination="Kr6-js-fpr" id="K9G-Wc-N46"/>
+                <outlet property="btn9" destination="t4q-6I-TZS" id="AUB-Su-ogU"/>
+                <outlet property="clearButton" destination="UfP-3K-Q4g" id="gif-af-9tm"/>
+                <outlet property="doneButton" destination="pSa-dl-kG2" id="Jhj-Mj-bIY"/>
+                <outlet property="dotButton" destination="tTi-EN-Aax" id="RxE-gg-qTi"/>
+                <outlet property="doubleZeroButton" destination="SC4-y1-XTm" id="Ynr-ld-GHH"/>
+                <outlet property="removeButton" destination="eFP-ag-auP" id="RF2-Pd-k5R"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="269"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0zZ-k1-2At">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="269"/>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sDA-e2-0az">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="269"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cgh-nf-J9z" userLabel="First">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="smU-OY-85K" customClass="CircleButtonView" customModule="TipCalculator" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="94" height="60"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="7"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kr6-js-fpr" customClass="CircleButtonView" customModule="TipCalculator" customModuleProvider="target">
+                                    <rect key="frame" x="94" y="0.0" width="93.5" height="60"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="8"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t4q-6I-TZS" customClass="CircleButtonView" customModule="TipCalculator" customModuleProvider="target">
+                                    <rect key="frame" x="187.5" y="0.0" width="93.5" height="60"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="9"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UfP-3K-Q4g" customClass="CircleButtonView" customModule="TipCalculator" customModuleProvider="target">
+                                    <rect key="frame" x="281" y="0.0" width="94" height="60"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="C"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Kr6-js-fpr" firstAttribute="width" secondItem="smU-OY-85K" secondAttribute="width" id="UGx-Vf-gxm"/>
+                                <constraint firstItem="t4q-6I-TZS" firstAttribute="width" secondItem="smU-OY-85K" secondAttribute="width" id="nve-c3-O4J"/>
+                                <constraint firstItem="UfP-3K-Q4g" firstAttribute="width" secondItem="smU-OY-85K" secondAttribute="width" id="q78-x6-J0j"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fnl-NX-SBn" userLabel="Second">
+                            <rect key="frame" x="0.0" y="70" width="375" height="60"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7aH-Ba-iBX" customClass="CircleButtonView" customModule="TipCalculator" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="94" height="60"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="4"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RMg-Vf-GWQ" customClass="CircleButtonView" customModule="TipCalculator" customModuleProvider="target">
+                                    <rect key="frame" x="94" y="0.0" width="94" height="60"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="5"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0p8-xp-Wa0" customClass="CircleButtonView" customModule="TipCalculator" customModuleProvider="target">
+                                    <rect key="frame" x="188" y="0.0" width="94" height="60"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="6"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eFP-ag-auP" customClass="CircleButtonView" customModule="TipCalculator" customModuleProvider="target">
+                                    <rect key="frame" x="282" y="0.0" width="93" height="60"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="←"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="0p8-xp-Wa0" firstAttribute="width" secondItem="7aH-Ba-iBX" secondAttribute="width" id="OEW-mZ-sCL"/>
+                                <constraint firstItem="RMg-Vf-GWQ" firstAttribute="width" secondItem="7aH-Ba-iBX" secondAttribute="width" id="puf-9i-iZ5"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdD-gj-ehh" userLabel="Third">
+                            <rect key="frame" x="0.0" y="140" width="375" height="59.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1w5-gR-8XG" customClass="CircleButtonView" customModule="TipCalculator" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="94" height="59.5"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="1"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dnQ-Ny-svH" customClass="CircleButtonView" customModule="TipCalculator" customModuleProvider="target">
+                                    <rect key="frame" x="94" y="0.0" width="94" height="59.5"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="2"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pyo-lr-dna" customClass="CircleButtonView" customModule="TipCalculator" customModuleProvider="target">
+                                    <rect key="frame" x="188" y="0.0" width="94" height="59.5"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="3"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hB1-RV-05S">
+                                    <rect key="frame" x="282" y="0.0" width="93" height="59.5"/>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="pyo-lr-dna" firstAttribute="width" secondItem="1w5-gR-8XG" secondAttribute="width" id="LEG-3L-Z8P"/>
+                                <constraint firstItem="dnQ-Ny-svH" firstAttribute="width" secondItem="1w5-gR-8XG" secondAttribute="width" id="TBx-X1-cZa"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sTF-Pe-O4B" userLabel="Fourth">
+                            <rect key="frame" x="0.0" y="209.5" width="375" height="59.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SC4-y1-XTm" customClass="CircleButtonView" customModule="TipCalculator" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="94" height="59.5"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="00"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ujo-pc-bxk" customClass="CircleButtonView" customModule="TipCalculator" customModuleProvider="target">
+                                    <rect key="frame" x="94" y="0.0" width="94" height="59.5"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="0"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tTi-EN-Aax" customClass="CircleButtonView" customModule="TipCalculator" customModuleProvider="target">
+                                    <rect key="frame" x="188" y="0.0" width="94" height="59.5"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="."/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pSa-dl-kG2" customClass="CircleButtonView" customModule="TipCalculator" customModuleProvider="target">
+                                    <rect key="frame" x="282" y="0.0" width="93" height="59.5"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="✓"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="tTi-EN-Aax" firstAttribute="width" secondItem="SC4-y1-XTm" secondAttribute="width" id="RSg-oJ-fqT"/>
+                                <constraint firstItem="ujo-pc-bxk" firstAttribute="width" secondItem="SC4-y1-XTm" secondAttribute="width" id="unQ-7b-8PO"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="7aH-Ba-iBX" firstAttribute="width" secondItem="smU-OY-85K" secondAttribute="width" id="5ON-eP-nxa"/>
+                        <constraint firstItem="sTF-Pe-O4B" firstAttribute="height" secondItem="cgh-nf-J9z" secondAttribute="height" id="EeA-ad-PBf"/>
+                        <constraint firstItem="1w5-gR-8XG" firstAttribute="width" secondItem="smU-OY-85K" secondAttribute="width" id="U8n-Gb-p8g"/>
+                        <constraint firstItem="gdD-gj-ehh" firstAttribute="height" secondItem="cgh-nf-J9z" secondAttribute="height" id="flt-uG-82S"/>
+                        <constraint firstItem="SC4-y1-XTm" firstAttribute="width" secondItem="1w5-gR-8XG" secondAttribute="width" id="kf2-1r-dth"/>
+                        <constraint firstItem="Fnl-NX-SBn" firstAttribute="height" secondItem="cgh-nf-J9z" secondAttribute="height" id="tR3-lg-5np"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="sDA-e2-0az" secondAttribute="bottom" id="14j-nJ-73D"/>
+                <constraint firstItem="sDA-e2-0az" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6Fm-hZ-SCK"/>
+                <constraint firstItem="0zZ-k1-2At" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="84X-ab-PAO"/>
+                <constraint firstItem="sDA-e2-0az" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9lP-gk-UpB"/>
+                <constraint firstAttribute="trailing" secondItem="sDA-e2-0az" secondAttribute="trailing" id="IMQ-Id-LKh"/>
+                <constraint firstItem="0zZ-k1-2At" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="U7l-Jk-jza"/>
+                <constraint firstAttribute="bottom" secondItem="0zZ-k1-2At" secondAttribute="bottom" id="iny-st-4iv"/>
+                <constraint firstAttribute="trailing" secondItem="0zZ-k1-2At" secondAttribute="trailing" id="p6x-Ts-ZX7"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="32.5" y="-125.5"/>
+        </view>
+    </objects>
+</document>
