@@ -189,7 +189,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="background" destination="fLL-pA-AFT" id="q4A-do-ByY"/>
+                        <outlet property="billSubItemView" destination="umt-4z-uuY" id="ey4-nO-vaL"/>
+                        <outlet property="numberKeyboard" destination="dm8-Jq-wCx" id="EA0-fJ-E7r"/>
+                        <outlet property="peopleSubItemView" destination="Ji0-Na-AOj" id="0Df-OL-U5V"/>
+                        <outlet property="popupView" destination="cWh-2w-JVv" id="me5-fy-49Y"/>
                         <outlet property="settingsButton" destination="kSV-jA-PyC" id="2Rf-z5-pD5"/>
+                        <outlet property="tipSubItemView" destination="W10-x1-D0M" id="OVH-Xl-LRa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

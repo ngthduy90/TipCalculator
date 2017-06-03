@@ -7,10 +7,26 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var settingsButton: UIButton!
     
+    @IBOutlet weak var billSubItemView: ItemButtonView!
+    @IBOutlet weak var tipSubItemView: ItemButtonView!
+    @IBOutlet weak var peopleSubItemView: ItemButtonView!
+    
+    @IBOutlet weak var popupView: UIView!
+    
+    @IBOutlet weak var numberKeyboard: NumberKeyboardView!
+    
     let transition = BubbleTransition()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        billSubItemView.delegate = self
+        
+        tipSubItemView.delegate = self
+        
+        peopleSubItemView.delegate = self
+        
+        numberKeyboard.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,7 +79,46 @@ class ViewController: UIViewController {
         
         return gradient
     }
+    
+    func showPopup() {
+        print("Show popup")
+        self.view.bringSubview(toFront: popupView)
+        
+        popupView.isHidden = false
+    }
+    
+    fileprivate func hidePopup() {
+        print("Hide popup")
+        self.view.sendSubview(toBack: popupView)
+        
+        popupView.isHidden = true
+    }
 
+}
+
+extension ViewController: NumberKeyboardViewDelegate {
+    
+    func numberKeyboardSendValue(_ number: Double) {
+        print(number)
+    }
+    
+    func numberKeyboardSendText(_ text: String) {
+        print(text)
+    }
+    
+    func numberKeyboardDone() {
+        print("Done")
+        
+        self.hidePopup()
+    }
+    
+}
+
+extension ViewController: ItemButtonViewDelegate {
+    
+    func didChoose(type itemType: ItemType, from itemView: ItemButtonView) {
+        self.showPopup()
+    }
 }
 
 extension ViewController: UIViewControllerTransitioningDelegate {
@@ -85,6 +140,5 @@ extension ViewController: UIViewControllerTransitioningDelegate {
         
         return transition
     }
-    
 }
 
