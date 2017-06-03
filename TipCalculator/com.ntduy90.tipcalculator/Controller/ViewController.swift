@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
-        print("Did layout subviews")
+//        print("Did layout subviews")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -107,7 +107,6 @@ extension ViewController: NumberKeyboardViewDelegate {
     }
     
     func numberKeyboardDone() {
-        print("Done")
         
         self.hidePopup()
     }
@@ -117,6 +116,7 @@ extension ViewController: NumberKeyboardViewDelegate {
 extension ViewController: ItemButtonViewDelegate {
     
     func didChoose(type itemType: ItemType, from itemView: ItemButtonView) {
+        
         self.showPopup()
     }
 }

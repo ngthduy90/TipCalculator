@@ -2,11 +2,21 @@
 import UIKit
 import ChameleonFramework
 
+struct TipSettings {
+    
+    var people = 1
+
+    var tip = 10.0
+    
+}
+
 class AppSettings {
     
     static let instance = AppSettings()
     
     var styles = [AppStyle]()
+    
+    let tipSettings = TipSettings()
     
     var primaryColor: UIColor?
     
@@ -23,16 +33,21 @@ class AppSettings {
         
         if let style = self.styles.first {
             
-            self.primaryColor = HexColor(style.primary)
-            
-            self.subColor = HexColor(style.sub)
-            
-            self.titleTextColor = HexColor(style.title)
-            
-            self.touchableColor = HexColor(style.touchable)
-            
-            self.untouchableColor = HexColor(style.untouchable)
+            changeStyle(style)
         }
+    }
+    
+    func changeStyle(_ style: AppStyle) {
+        
+        self.primaryColor = HexColor(style.primary)
+        
+        self.subColor = HexColor(style.sub)
+        
+        self.titleTextColor = HexColor(style.title)
+        
+        self.touchableColor = HexColor(style.touchable)
+        
+        self.untouchableColor = HexColor(style.untouchable)
     }
     
     private class func defaultStyles() -> [AppStyle] {
