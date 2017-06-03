@@ -10,6 +10,7 @@
 		6D800C4EF0CBEB51C7095641 /* Pods_com_ntduy90_tipcalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A22C9A320F7A4A8CCA2FF04 /* Pods_com_ntduy90_tipcalculator.framework */; };
 		A90BF4781EE2B0C800D7FC5E /* NumberKeyboardViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90BF4771EE2B0C800D7FC5E /* NumberKeyboardViewDelegate.swift */; };
 		A90D99C51EE3267100170EF9 /* TipInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90D99C41EE3267100170EF9 /* TipInfo.swift */; };
+		A90D99C81EE356EE00170EF9 /* LayerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90D99C71EE356EE00170EF9 /* LayerUtils.swift */; };
 		A959F3F51EE08BD5001E5560 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A95F51B01EDF293F0098CDFC /* LaunchScreen.storyboard */; };
 		A959F3F61EE08BD5001E5560 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A959F3F11EE08A90001E5560 /* Main.storyboard */; };
 		A959F4021EE08CF3001E5560 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A959F4011EE08CF3001E5560 /* ItemView.swift */; };
@@ -37,6 +38,7 @@
 		6A22C9A320F7A4A8CCA2FF04 /* Pods_com_ntduy90_tipcalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_com_ntduy90_tipcalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A90BF4771EE2B0C800D7FC5E /* NumberKeyboardViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberKeyboardViewDelegate.swift; sourceTree = "<group>"; };
 		A90D99C41EE3267100170EF9 /* TipInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipInfo.swift; sourceTree = "<group>"; };
+		A90D99C71EE356EE00170EF9 /* LayerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerUtils.swift; sourceTree = "<group>"; };
 		A959F3F21EE08A90001E5560 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A959F4011EE08CF3001E5560 /* ItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		A959F4041EE08D05001E5560 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,14 @@
 				A90D99C41EE3267100170EF9 /* TipInfo.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A90D99C61EE356C500170EF9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A90D99C71EE356EE00170EF9 /* LayerUtils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		A959F3F41EE08AA0001E5560 /* Storyboards */ = {
@@ -146,6 +156,7 @@
 				A959F4001EE08CF3001E5560 /* CustomViews */,
 				A9617F461EE1CB2500244881 /* Animations */,
 				A90D99C31EE3264E00170EF9 /* Models */,
+				A90D99C61EE356C500170EF9 /* Utils */,
 				A95F51A71EDF293F0098CDFC /* AppDelegate.swift */,
 				A95F51AE1EDF293F0098CDFC /* Assets.xcassets */,
 				A95F51B31EDF293F0098CDFC /* Info.plist */,
@@ -360,6 +371,7 @@
 				A9617F481EE1CB6600244881 /* BubbleTransition.swift in Sources */,
 				A9617F501EE1D4EA00244881 /* AppSettings.swift in Sources */,
 				A9617F541EE1D83600244881 /* AppStyle.swift in Sources */,
+				A90D99C81EE356EE00170EF9 /* LayerUtils.swift in Sources */,
 				A9617F581EE1E2C200244881 /* NumberKeyboardView.swift in Sources */,
 				A959F40B1EE09E6E001E5560 /* ItemButtonProtocol.swift in Sources */,
 				A959F4021EE08CF3001E5560 /* ItemView.swift in Sources */,

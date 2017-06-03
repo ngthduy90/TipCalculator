@@ -48,13 +48,11 @@ class ViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
-        print("Did layout subviews")
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        print("View will appear")
         
         initBackground()
         
@@ -108,11 +106,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var background: UIView!
     
     func initBackground() {
-        let backgroundLayer = applyGradient(colours: [AppSettings.instance.primaryColor!, AppSettings.instance.subColor!])
         
-        background.backgroundColor = UIColor.clear
-        
-        background.layer.addSublayer(backgroundLayer)
+        background.applyGradient(colours: [AppSettings.instance.primaryColor!, AppSettings.instance.subColor!])
     }
     
     func initNavigationBarStyle() {
@@ -181,7 +176,7 @@ extension ViewController: NumberKeyboardViewDelegate {
     }
     
     func numberKeyboardSendText(_ text: String) {
-        print(text)
+//        print(text)
     }
     
     func numberKeyboardFilterValue(_ number: Double) -> Bool {
