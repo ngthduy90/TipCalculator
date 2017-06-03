@@ -14,6 +14,8 @@ protocol NumberKeyboardViewDelegate {
     
     func numberKeyboardSendValue(_ number: Double)
     
+    func numberKeyboardFilterValue(_ number: Double) -> Bool
+    
     func numberKeyboardDone()
     
 }

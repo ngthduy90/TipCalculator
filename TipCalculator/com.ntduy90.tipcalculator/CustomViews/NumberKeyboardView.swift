@@ -84,13 +84,21 @@ class NumberKeyboardView: UIView {
         return view
     }
     
-    fileprivate func resetValue() {
+    func resetValue() {
         
         self.valueAsText = defaultValueText
         
         self.valueAsNumber = defaultValueNumber
         
         self.havePrecision = false
+    }
+    
+    func showPrecisionKey() {
+        self.dotButton.alpha = 1.0
+    }
+    
+    func hidePrecisionKey() {
+        self.dotButton.alpha = 0.0
     }
     
     fileprivate func defineButtonKeys() {
@@ -187,6 +195,8 @@ extension NumberKeyboardView: CircleButtonDelegate {
             return
         }
         
+        let oldValueAsText = self.valueAsText
+        
         if self.valueAsText.hasPrefix("0") {
             
             self.valueAsText = text
@@ -203,8 +213,18 @@ extension NumberKeyboardView: CircleButtonDelegate {
             
         }
         
-        self.valueAsNumber = (Double.init(self.valueAsText) ?? 0)
-
+        let newValue = (Double.init(self.valueAsText) ?? 0)
+        
+        if let filtered = delegate?.numberKeyboardFilterValue(newValue) {
+            
+            self.valueAsNumber = (filtered) ? newValue : self.valueAsNumber
+            
+            self.valueAsText = (filtered) ? self.valueAsText : oldValueAsText
+            
+        } else {
+            
+            self.valueAsNumber = newValue
+        }
     }
     
     private func handleRemoveLastCharacter() {

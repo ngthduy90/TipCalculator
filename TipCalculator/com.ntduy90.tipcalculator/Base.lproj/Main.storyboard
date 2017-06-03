@@ -34,6 +34,23 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tM3-5a-PZD">
+                                        <rect key="frame" x="20" y="204" width="335" height="63"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOH-Vl-gag">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="26.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="0.72107769691780821" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emO-ry-XpE">
+                                                <rect key="frame" x="0.0" y="36.5" width="335" height="26.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dm8-Jq-wCx" customClass="NumberKeyboardView" customModule="TipCalculator" customModuleProvider="target">
                                         <rect key="frame" x="10" y="347" width="355" height="300"/>
                                     </view>
@@ -41,9 +58,12 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="mKY-if-Rwg" secondAttribute="bottom" id="8BP-94-XH9"/>
                                     <constraint firstAttribute="trailing" secondItem="mKY-if-Rwg" secondAttribute="trailing" id="9N2-zj-Gst"/>
+                                    <constraint firstItem="tM3-5a-PZD" firstAttribute="leading" secondItem="cWh-2w-JVv" secondAttribute="leading" constant="20" id="UhN-K8-CSR"/>
                                     <constraint firstItem="mKY-if-Rwg" firstAttribute="top" secondItem="cWh-2w-JVv" secondAttribute="top" id="YPS-jW-YID"/>
+                                    <constraint firstItem="dm8-Jq-wCx" firstAttribute="top" secondItem="tM3-5a-PZD" secondAttribute="bottom" constant="80" id="ZFZ-yP-Xjm"/>
                                     <constraint firstItem="dm8-Jq-wCx" firstAttribute="height" secondItem="cWh-2w-JVv" secondAttribute="height" multiplier="0.45" id="aoo-FE-Ezt"/>
                                     <constraint firstItem="mKY-if-Rwg" firstAttribute="leading" secondItem="cWh-2w-JVv" secondAttribute="leading" id="cod-9q-Od8"/>
+                                    <constraint firstAttribute="trailing" secondItem="tM3-5a-PZD" secondAttribute="trailing" constant="20" id="dV3-gD-TSz"/>
                                     <constraint firstAttribute="trailing" secondItem="dm8-Jq-wCx" secondAttribute="trailing" constant="10" id="dkw-XJ-BYD"/>
                                     <constraint firstAttribute="bottom" secondItem="dm8-Jq-wCx" secondAttribute="bottom" constant="20" id="oDV-e6-r5W"/>
                                     <constraint firstItem="dm8-Jq-wCx" firstAttribute="leading" secondItem="cWh-2w-JVv" secondAttribute="leading" constant="10" id="xne-7z-Tjj"/>
@@ -176,11 +196,23 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tip Calculator" id="LPV-0m-vX7">
-                        <barButtonItem key="rightBarButtonItem" id="Ty4-th-fDk">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kSV-jA-PyC">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="VTB-qc-2qQ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Pyf-ZQ-OSH">
+                                <rect key="frame" x="16" y="2" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Settings"/>
+                                <inset key="imageEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                <state key="normal" image="refresh"/>
+                                <connections>
+                                    <action selector="didTapResetInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6mn-vw-P6c"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" id="Ty4-th-fDk">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kSV-jA-PyC">
+                                <rect key="frame" x="319" y="2" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                <state key="normal" image="settings"/>
                                 <connections>
                                     <segue destination="t6b-lL-jFD" kind="presentation" id="daI-Yb-iHZ"/>
                                 </connections>
@@ -191,10 +223,15 @@
                         <outlet property="background" destination="fLL-pA-AFT" id="q4A-do-ByY"/>
                         <outlet property="billSubItemView" destination="umt-4z-uuY" id="ey4-nO-vaL"/>
                         <outlet property="numberKeyboard" destination="dm8-Jq-wCx" id="EA0-fJ-E7r"/>
+                        <outlet property="payMoneyView" destination="YTd-fA-r3k" id="FT0-b3-3nu"/>
                         <outlet property="peopleSubItemView" destination="Ji0-Na-AOj" id="0Df-OL-U5V"/>
+                        <outlet property="popupContentLabel" destination="emO-ry-XpE" id="IBG-Rw-IFF"/>
+                        <outlet property="popupTitleLabel" destination="lOH-Vl-gag" id="xNe-JX-L16"/>
                         <outlet property="popupView" destination="cWh-2w-JVv" id="me5-fy-49Y"/>
+                        <outlet property="resetInfoButton" destination="Pyf-ZQ-OSH" id="m9q-oi-2eQ"/>
                         <outlet property="settingsButton" destination="kSV-jA-PyC" id="2Rf-z5-pD5"/>
                         <outlet property="tipSubItemView" destination="W10-x1-D0M" id="OVH-Xl-LRa"/>
+                        <outlet property="totalMoneyLabel" destination="lYh-e0-UIy" id="cRe-Ri-fWJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -252,4 +289,8 @@
             <point key="canvasLocation" x="17" y="139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="refresh" width="40" height="40"/>
+        <image name="settings" width="40" height="40"/>
+    </resources>
 </document>

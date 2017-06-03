@@ -6,8 +6,9 @@ struct TipSettings {
     
     var people = 1
 
-    var tip = 10.0
+    var tip: Float = 0.1
     
+    var currencyFormat = "$%.2f"
 }
 
 class AppSettings {
