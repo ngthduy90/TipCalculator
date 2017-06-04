@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ItemButtonView" customModule="TipCalculator" customModuleProvider="target">
             <connections>
                 <outlet property="boundView" destination="Bb5-94-SeO" id="0BQ-7h-Khh"/>
+                <outlet property="button" destination="7Zk-9r-kUW" id="A5l-Qd-UWK"/>
                 <outlet property="contentLabel" destination="3Nc-zg-rg9" id="09h-H9-0Jt"/>
                 <outlet property="titleLabel" destination="7cP-ix-ZDz" id="xMX-NN-Zqa"/>
             </connections>

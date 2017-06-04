@@ -36,6 +36,8 @@ class ViewController: UIViewController {
     var currentItemResponder: ItemType?
     
     let formatter = NumberFormatter()
+    
+    var performDidChooseAction: (() -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +49,8 @@ class ViewController: UIViewController {
         formatter.numberStyle = .currency
         
         formatter.maximumFractionDigits = 3
+        
+        performDidChooseAction = showPopupForBill()
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,6 +71,8 @@ class ViewController: UIViewController {
         refreshInfo()
         
         numberKeyboard.rerenderKeyboard()
+        
+        performDidChooseAction?()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -76,6 +82,20 @@ class ViewController: UIViewController {
         controller.transitioningDelegate = self
         
         controller.modalPresentationStyle = .custom
+    }
+    
+    private func showPopupForBill() -> () -> Void {
+        
+        func chooseBill() {
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                self.didChoose(type: .bill, from: self.billSubItemView)
+                
+                self.performDidChooseAction = nil
+            }
+        }
+        
+        return chooseBill
     }
     
     private func assignDelegate() {
@@ -172,7 +192,7 @@ extension ViewController: NumberKeyboardViewDelegate {
             
         case .bill:
             self.tipInfo.billMoney = number
-            self.popupContentLabel.text = String(format: currencyFormat, tipInfo.billMoney)
+            self.popupContentLabel.text = formatter.string(from: tipInfo.billMoney as NSNumber)
             
         case .tip:
             self.tipInfo.tipPercentage = Float(number / 100)
@@ -247,7 +267,7 @@ extension ViewController: ItemButtonViewDelegate {
             
         case .bill:
             self.popupTitleLabel.text = "Bill"
-            self.popupContentLabel.text = String(format: currencyFormat, tipInfo.billMoney)
+            self.popupContentLabel.text = formatter.string(from: tipInfo.billMoney as NSNumber)
             
         case .people:
             self.popupTitleLabel.text = "No. of people"
