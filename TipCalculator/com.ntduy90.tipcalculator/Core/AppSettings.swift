@@ -29,6 +29,8 @@ class AppSettings {
     
     var untouchableColor: UIColor?
     
+    var keyboardColor: UIColor?
+    
     private init() {
         self.styles = AppSettings.defaultStyles()
         
@@ -49,6 +51,8 @@ class AppSettings {
         self.touchableColor = HexColor(style.touchable)
         
         self.untouchableColor = HexColor(style.untouchable)
+        
+        self.keyboardColor = HexColor(style.keyboard)
     }
     
     private class func defaultStyles() -> [AppStyle] {
@@ -59,7 +63,15 @@ class AppSettings {
                              sub: "F38181",
                              title: "808080",
                              touchable: "1EAAF1",
-                             untouchable: "8CC152"))
+                             untouchable: "8CC152",
+                             keyboard: "FCE38A"))
+        
+        list.append(AppStyle(primary: "517FA4",
+                             sub: "243949",
+                             title: "808080",
+                             touchable: "1EAAF1",
+                             untouchable: "B9EF7A",
+                             keyboard: "87ABC7"))
         
         return list
     }

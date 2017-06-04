@@ -75,17 +75,28 @@ class ItemButtonView: ItemView {
         setupView()
     }
     
+    func renderView() {
+        
+        titleLabel.textColor = AppSettings.instance.titleTextColor
+        
+        contentLabel.textColor = AppSettings.instance.touchableColor
+    }
+    
     // MARK: - Private Helper Methods
     
     // Performs the initial setup.
     fileprivate func setupView() {
         let view = viewFromNibForClass()
+        
         view.frame = bounds
         view.autoresizingMask = [
             UIViewAutoresizing.flexibleWidth,
             UIViewAutoresizing.flexibleHeight
         ]
+        
         addSubview(view)
+        
+        renderView()
     }
     
     // Loads a XIB file into a view and returns this view.

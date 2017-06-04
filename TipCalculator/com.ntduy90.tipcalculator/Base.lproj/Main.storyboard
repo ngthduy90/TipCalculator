@@ -93,7 +93,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYh-e0-UIy">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="60"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                        <color key="textColor" red="0.5490196078431373" green="0.75686274509803919" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.5490196078431373" green="0.75686274509803919" blue="0.32156862745098036" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -299,12 +299,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="227"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAx-Xg-EIj">
-                                        <rect key="frame" x="20" y="30" width="114" height="24"/>
+                                        <rect key="frame" x="20" y="30" width="120" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="JBn-2c-Jeg"/>
-                                            <constraint firstAttribute="width" constant="114" id="q2r-nr-m3K"/>
+                                            <constraint firstAttribute="width" constant="120" id="q2r-nr-m3K"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <inset key="contentEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
                                         <inset key="imageEdgeInsets" minX="5" minY="4" maxX="2" maxY="4"/>
                                         <state key="normal" title="＜ Tip Calculator">
                                             <color key="titleColor" red="0.11764705882352941" green="0.66666666666666663" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
@@ -364,6 +365,9 @@
                                                             </view>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7C-cE-OWx">
                                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="80"/>
+                                                                <connections>
+                                                                    <action selector="didTapFirstTheme:" destination="t6b-lL-jFD" eventType="touchUpInside" id="RKP-T7-p3q"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -395,6 +399,9 @@
                                                             </view>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUO-DN-8VT">
                                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="80"/>
+                                                                <connections>
+                                                                    <action selector="didTapSecondTheme:" destination="t6b-lL-jFD" eventType="touchUpInside" id="rns-UF-KYT"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -495,6 +502,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="RAx-Xg-EIj" id="Iao-zg-oFQ"/>
                         <outlet property="firstThemeView" destination="w9j-ez-V3p" id="vZl-zs-fYo"/>
                         <outlet property="numberKeyboard" destination="Zwb-lw-JjV" id="9vR-tr-45j"/>
                         <outlet property="peopleValueLabel" destination="xTj-Ad-s3h" id="XQp-dW-z6w"/>

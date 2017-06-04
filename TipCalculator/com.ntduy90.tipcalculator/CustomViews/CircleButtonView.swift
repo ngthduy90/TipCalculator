@@ -36,9 +36,13 @@ class CircleButtonView: UIView {
     }
     
     override func layoutSubviews() {
+        renderView()
+    }
+    
+    func renderView() {
         self.button.layer.borderColor = AppSettings.instance.primaryColor?.cgColor
         
-        self.label.textColor = AppSettings.instance.primaryColor
+        self.label.textColor = AppSettings.instance.keyboardColor
         
         self.button.layer.borderWidth = 1.0
         

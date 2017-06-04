@@ -65,6 +65,8 @@ class ViewController: UIViewController {
         initNavigationBarStyle()
         
         refreshInfo()
+        
+        numberKeyboard.rerenderKeyboard()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -114,6 +116,12 @@ class ViewController: UIViewController {
     func initBackground() {
         
         background.applyGradient(colours: [AppSettings.instance.primaryColor!, AppSettings.instance.subColor!])
+        
+        totalMoneyLabel.textColor = AppSettings.instance.untouchableColor
+        
+        payMoneyView.contentLabel.textColor = AppSettings.instance.untouchableColor
+        
+        payMoneyView.boundView.alpha = 0.6
     }
     
     func initNavigationBarStyle() {

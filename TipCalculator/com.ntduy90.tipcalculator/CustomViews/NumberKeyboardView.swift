@@ -41,6 +41,8 @@ class NumberKeyboardView: UIView {
     fileprivate var valueAsText: String! = ""
     fileprivate var valueAsNumber: Double?
     
+    var listButtons = [CircleButtonView]()
+    
     // MARK: - Initializers
     
     override init(frame: CGRect) {
@@ -101,52 +103,74 @@ class NumberKeyboardView: UIView {
         self.dotButton.alpha = 0.0
     }
     
+    func rerenderKeyboard() {
+        
+        listButtons.forEach {
+            $0.renderView()
+        }
+    }
+    
     fileprivate func defineButtonKeys() {
         
         btn0.actionType = ActionType.chooseText("0")
         btn0.delegate = self
+        listButtons.append(btn0)
         
         btn1.actionType = ActionType.chooseText("1")
         btn1.delegate = self
+        listButtons.append(btn1)
         
         btn2.actionType = ActionType.chooseText("2")
         btn2.delegate = self
+        listButtons.append(btn2)
         
         btn3.actionType = ActionType.chooseText("3")
         btn3.delegate = self
+        listButtons.append(btn3)
         
         btn4.actionType = ActionType.chooseText("4")
         btn4.delegate = self
+        listButtons.append(btn4)
         
         btn5.actionType = ActionType.chooseText("5")
         btn5.delegate = self
+        listButtons.append(btn5)
         
         btn6.actionType = ActionType.chooseText("6")
         btn6.delegate = self
+        listButtons.append(btn6)
         
         btn7.actionType = ActionType.chooseText("7")
         btn7.delegate = self
+        listButtons.append(btn7)
         
         btn8.actionType = ActionType.chooseText("8")
         btn8.delegate = self
+        listButtons.append(btn8)
         
         btn9.actionType = ActionType.chooseText("9")
         btn9.delegate = self
+        listButtons.append(btn9)
         
         dotButton.actionType = ActionType.chooseText(precisionChar)
         dotButton.delegate = self
+        listButtons.append(dotButton)
         
         doubleZeroButton.actionType = ActionType.chooseText("00")
         doubleZeroButton.delegate = self
+        listButtons.append(doubleZeroButton)
         
         clearButton.actionType = ActionType.clear
         clearButton.delegate = self
+        listButtons.append(clearButton)
         
         removeButton.actionType = ActionType.remove
         removeButton.delegate = self
+        listButtons.append(removeButton)
         
         doneButton.actionType = ActionType.done
         doneButton.delegate = self
+        listButtons.append(doneButton)
     }
 }
 

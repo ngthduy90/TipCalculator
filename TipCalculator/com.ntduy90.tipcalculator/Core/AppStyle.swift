@@ -18,4 +18,6 @@ struct AppStyle {
     let touchable: String
     
     let untouchable: String
+    
+    let keyboard: String
 }

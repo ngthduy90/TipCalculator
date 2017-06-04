@@ -1,9 +1,12 @@
 
 import UIKit
+import ChameleonFramework
 
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var settingsHeaderBackgroundView: UIView!
+    
+    @IBOutlet weak var backButton: UIButton!
     
     @IBOutlet weak var firstThemeView: ItemView!
     
@@ -25,12 +28,15 @@ class SettingsViewController: UIViewController {
     
     let appSettings = AppSettings.instance
     
+    let firstThemeStyle = AppSettings.instance.styles[0]
+    
+    let secondThemeStyle = AppSettings.instance.styles[1]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         assignDelegate()
         
-        print("Setting screen")
         displayListThemes()
     }
     
@@ -39,13 +45,22 @@ class SettingsViewController: UIViewController {
         
         displaySettings()
         
+        backButton.layer.cornerRadius = 5.0
+        backButton.layer.borderWidth = 1
+        backButton.layer.borderColor = appSettings.touchableColor?.cgColor
+        
         self.numberKeyboard.hidePrecisionKey()
         
-        settingsHeaderBackgroundView.applyGradient(colours: [AppSettings.instance.primaryColor!, AppSettings.instance.subColor!])
+        changeBackground()
     }
     
     @IBAction func didTapBackButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    private func changeBackground() {
+        
+        settingsHeaderBackgroundView.applyGradient(colours: [AppSettings.instance.primaryColor!, AppSettings.instance.subColor!])
     }
     
     private func assignDelegate() {
@@ -54,7 +69,9 @@ class SettingsViewController: UIViewController {
     
     private func displayListThemes() {
         
-        firstThemeView.applyGradient(colours: [appSettings.primaryColor!, appSettings.subColor!])
+        firstThemeView.applyGradient(colours: [HexColor(firstThemeStyle.primary)!, HexColor(firstThemeStyle.sub)!])
+        
+        secondThemeView.applyGradient(colours: [HexColor(secondThemeStyle.primary)!, HexColor(secondThemeStyle.sub)!])
     }
     
     fileprivate func displaySettings() {
@@ -74,6 +91,22 @@ class SettingsViewController: UIViewController {
         displayPopup("People", content: "\(Int(appSettings.tipSettings.people))")
         
         currentItemResponder = ItemType.people
+    }
+    
+    @IBAction func didTapFirstTheme(_ sender: Any) {
+        appSettings.changeStyle(firstThemeStyle)
+        
+        changeBackground()
+        
+        numberKeyboard.rerenderKeyboard()
+    }
+    
+    @IBAction func didTapSecondTheme(_ sender: Any) {
+        appSettings.changeStyle(secondThemeStyle)
+        
+        changeBackground()
+        
+        numberKeyboard.rerenderKeyboard()
     }
         
     func showPopup() {
