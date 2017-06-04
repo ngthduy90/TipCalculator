@@ -34,6 +34,8 @@ class ViewController: UIViewController {
     var currencyFormat: String! = ""
     
     var currentItemResponder: ItemType?
+    
+    let formatter = NumberFormatter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +43,10 @@ class ViewController: UIViewController {
         assignDelegate()
         
         currencyFormat = AppSettings.instance.tipSettings.currencyFormat
+        
+        formatter.numberStyle = .currency
+        
+        formatter.maximumFractionDigits = 3
     }
 
     override func didReceiveMemoryWarning() {
@@ -90,11 +96,11 @@ class ViewController: UIViewController {
         
         peopleSubItemView.content = "\(tipInfo.people)"
         
-        billSubItemView.content = String(format: currencyFormat, tipInfo.billMoney)
+        billSubItemView.content = formatter.string(from: tipInfo.billMoney as NSNumber)
         
-        totalMoneyLabel.text = String(format: currencyFormat, tipInfo.total)
+        totalMoneyLabel.text = formatter.string(from: tipInfo.total as NSNumber)
         
-        payMoneyView.content = String(format: currencyFormat, tipInfo.payMoney)
+        payMoneyView.content = formatter.string(from: tipInfo.payMoney as NSNumber)
     }
     
     @IBAction func didTapResetInfo(_ sender: Any) {

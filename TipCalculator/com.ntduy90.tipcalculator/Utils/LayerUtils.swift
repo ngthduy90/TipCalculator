@@ -13,7 +13,7 @@ extension UIView {
     func applyGradient(colours: [UIColor]) {
         let gradient: CAGradientLayer = CAGradientLayer()
         
-        gradient.frame = self.frame
+        gradient.frame = CGRect(origin: CGPoint.zero, size: self.frame.size)
         
         gradient.colors = colours.map { $0.cgColor }
         

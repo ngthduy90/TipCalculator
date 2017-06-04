@@ -17,7 +17,7 @@ class AppSettings {
     
     var styles = [AppStyle]()
     
-    let tipSettings = TipSettings()
+    var tipSettings = TipSettings()
     
     var primaryColor: UIColor?
     
