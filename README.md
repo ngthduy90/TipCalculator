@@ -21,7 +21,9 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
+- [x] App icon.
 - [x] Choose number of people for paying a bill.
+- [x] Change a default number of people in settings screen.
 - [x] Change application theme.
 - [x] Create a custom specific keyboard.
 - [x] Adaptive interfaces.
