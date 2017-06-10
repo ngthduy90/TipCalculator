@@ -253,6 +253,10 @@ extension NumberKeyboardView: CircleButtonDelegate {
     
     private func handleRemoveLastCharacter() {
         
+        guard !self.valueAsText.isEmpty else {
+            return
+        }
+        
         self.valueAsText.remove(at: valueAsText.index(before: valueAsText.endIndex))
         
         self.valueAsNumber = (Double.init(self.valueAsText) ?? 0)

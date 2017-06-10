@@ -64,8 +64,6 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        initBackground()
-        
         initNavigationBarStyle()
         
         refreshInfo()
@@ -73,6 +71,11 @@ class ViewController: UIViewController {
         numberKeyboard.rerenderKeyboard()
         
         performDidChooseAction?()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        initBackground()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
