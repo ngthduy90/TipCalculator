@@ -50,7 +50,9 @@ class SettingsViewController: UIViewController {
         backButton.layer.borderColor = appSettings.touchableColor?.cgColor
         
         self.numberKeyboard.hidePrecisionKey()
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         changeBackground()
     }
     
@@ -59,8 +61,7 @@ class SettingsViewController: UIViewController {
     }
     
     private func changeBackground() {
-        
-        settingsHeaderBackgroundView.applyGradient(colours: [AppSettings.instance.primaryColor!, AppSettings.instance.subColor!])
+        self.settingsHeaderBackgroundView.applyGradient(colours: [AppSettings.instance.primaryColor!, AppSettings.instance.subColor!])
     }
     
     private func assignDelegate() {

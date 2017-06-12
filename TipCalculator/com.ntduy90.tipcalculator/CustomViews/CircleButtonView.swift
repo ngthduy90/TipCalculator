@@ -53,6 +53,11 @@ class CircleButtonView: UIView {
     
     @IBAction func didTap(_ sender: Any) {
         self.delegate?.circleButtonDid(on: actionType)
+        self.button.backgroundColor = UIColor.clear
+    }
+    
+    @IBAction func willTap(_ sender: Any) {
+        self.button.backgroundColor = AppSettings.instance.primaryColor!
     }
     
     // MARK: - Private Helper Methods

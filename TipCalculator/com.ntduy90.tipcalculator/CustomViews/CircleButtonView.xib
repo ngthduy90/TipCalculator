@@ -39,6 +39,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                     <connections>
                         <action selector="didTap:" destination="-1" eventType="touchUpInside" id="BAq-Vi-LIa"/>
+                        <action selector="willTap:" destination="-1" eventType="touchDown" id="GYT-4w-tDj"/>
                     </connections>
                 </button>
             </subviews>
